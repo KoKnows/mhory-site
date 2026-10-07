@@ -160,81 +160,17 @@ p.lede { font-size: 1.2rem; color: var(--muted); max-width: 40ch; }
   margin: 0 0 12px;
 }
 
-/* Numbered steps: what the app does, in order. */
-.steps { display: grid; gap: 28px; max-width: 760px; margin-top: 8px; }
-.step { display: grid; grid-template-columns: 44px 1fr; gap: 20px; }
-.step-n {
-  width: 44px; height: 44px;
-  border-radius: 12px;
-  background: var(--tint);
-  color: var(--on-tint);
-  display: grid; place-items: center;
-  font-family: var(--serif);
-  font-weight: 600;
-  font-size: 1.3rem;
-}
-.step h3 { margin-bottom: 4px; }
-.step p { margin: 0; color: var(--muted); }
-
-/* The three views, as columns divided by hairlines rather than cards. */
-.views { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 8px; }
-.view { padding: 4px 28px; border-left: 1px solid var(--hairline); }
-.view:first-child { padding-left: 0; border-left: 0; }
-.view h3 { color: var(--ink-blue); margin-bottom: 6px; }
-.view p { margin: 0; color: var(--muted); }
-
-/* The dig: one place read down through time. */
-
-.strata {
-  list-style: none;
-  margin: 32px 0 0;
-  padding: 0;
-  position: relative;
-  max-width: 760px;
-}
-.strata::before {
-  content: "";
-  position: absolute;
-  left: 118px;
-  top: 8px;
-  bottom: 8px;
-  width: 2px;
-  background: var(--hairline);
-}
-.stratum {
-  display: grid;
-  grid-template-columns: 104px 1fr;
-  gap: 32px;
-  position: relative;
-  padding: 0 0 40px;
-}
-.stratum:last-child { padding-bottom: 0; }
-.stratum::before {
-  content: "";
-  position: absolute;
-  left: 113px;
-  top: 8px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--ink-blue);
-  box-shadow: 0 0 0 4px var(--paper);
-}
-.stratum.you::before { background: var(--brass); width: 14px; height: 14px; left: 112px; top: 7px; }
-.year {
-  font-family: var(--serif);
+/* Moments: a scene in serif, then what the app does in it. */
+.moments { display: grid; gap: 36px; max-width: 760px; margin-top: 12px; }
+.moment { border-left: 3px solid var(--brass); padding-left: 22px; }
+.moment h3 {
+  font-size: clamp(1.25rem, 2.4vw, 1.55rem);
   font-weight: 500;
-  font-size: 1.15rem;
-  color: var(--ink-blue);
-  text-align: right;
-  line-height: 1.6;
-  white-space: nowrap;
+  font-style: italic;
+  line-height: 1.3;
+  margin-bottom: 10px;
 }
-.stratum.you .year { color: var(--brass-deep); }
-.stratum h3 { font-size: 1.35rem; margin-bottom: 6px; }
-.stratum p { margin: 0; color: var(--muted); }
-.stratum.you .stratum-body { border-left: 3px solid var(--brass); padding-left: 16px; margin-left: -19px; }
-.stratum.you h3 { color: var(--brass-deep); }
+.moment p { margin: 0; color: var(--muted); }
 
 /* Long-form pages */
 .page-head { padding: clamp(36px, 6vw, 64px) 0 8px; }
@@ -277,8 +213,6 @@ p.lede { font-size: 1.2rem; color: var(--muted); max-width: 40ch; }
   .hero { grid-template-columns: 1fr; gap: 28px; }
   .hero > div:first-child { order: 2; }
   .hero-icon { width: 128px; }
-  .views { grid-template-columns: 1fr; gap: 24px; }
-  .view { padding: 0; border-left: 0; }
   .strata::before { left: 5px; }
   .stratum { grid-template-columns: 1fr; gap: 4px; padding-left: 28px; }
   .stratum::before { left: 0; }
