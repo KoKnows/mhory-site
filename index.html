@@ -38,7 +38,7 @@
     <div>
       <hr class="rule">
       <h1>The story of where you are.</h1>
-      <p class="lede">An app for iPhone and Android that reads the public record for the place you're standing in and has an AI write it up: what was here, when, and how we know. Ask it anything, and it answers from the sources, which it shows you.</p>
+      <p class="lede">Mhory is an app for iPhone and Android that details the history of your current location. It gathers the public record for where you are, uses AI to write it up as a short account with a timeline, and lets you ask questions about what it found.</p>
       <div class="stores">
         <span class="store soon" aria-disabled="true">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.8 1.3 10.3.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.7-1-2.7-4.2zM13.9 4.9c.7-.9 1.2-2.1 1.1-3.3-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.2 1.1.1 2.3-.6 3-1.5z"/></svg>
@@ -55,44 +55,67 @@
 
   <section class="section">
     <div class="wrap">
-      <p class="eyebrow">When you'd open it</p>
-      <h2>Moments that come with a question</h2>
-      <div class="moments">
-        <article class="moment">
-          <h3>The restaurant has a forty-minute wait, in a town you'd never heard of until the car needed a break.</h3>
-          <p>You open Mhory on the bench outside. In a few seconds it has read the public record for the half-mile around you and written the short version: the mill the town grew up around, the rail line that made it, the fire that took the hotel in 1911 and the one across the street that replaced it. The one you're waiting outside of.</p>
-        </article>
-        <article class="moment">
-          <h3>Your daughter asks what the green plaque on the corner says, and you have no idea.</h3>
-          <p>The plaque is on the map, pinned, two doors down. Tapping it gives you the listing it came from and the date it was granted. She asks who lived there. You type that into Ask, and the answer names the family, with a link to the article it got that from, so you can tell her and then read the rest yourself.</p>
-        </article>
-        <article class="moment">
-          <h3>The hotel is in an old building, and the lobby feels like it has a past it isn't mentioning.</h3>
-          <p>It was a bank. Then, for thirty years, a department store. The timeline runs down from the renovation last decade to the land grant that put a street here in the first place, each entry with its source beside it. You go to bed knowing which floor held the vault.</p>
-        </article>
-        <article class="moment">
-          <h3>You've walked this block for six years. You've never once looked up.</h3>
-          <p>Set the radius to a mile and let the map fill in. There's a listed building on your own street that the registry describes in a paragraph, a church older than the city's charter, and the spot where the streetcar line turned. You leave a mark on the timeline at the corner, for yourself, the way you'd dog-ear a page.</p>
-        </article>
+      <p class="eyebrow">What it does</p>
+      <h2>From your location to a written history</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step-n">1</span>
+          <div>
+            <h3>It finds where you are</h3>
+            <p>Mhory uses your phone's location while the app is open, or a spot you choose by pressing and holding on the map. The search covers a radius you set, from one mile to twenty-five.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-n">2</span>
+          <div>
+            <h3>Mhory searches the public record</h3>
+            <p>Mhory gathers geotagged Wikipedia articles, dated facts from Wikidata, historic features from OpenStreetMap, and official listings from the US National Register of Historic Places and Historic England. Duplicate records are merged, while every entry keeps a link to its source.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-n">3</span>
+          <div>
+            <h3>AI writes the account</h3>
+            <p>Claude turns historical records into a short account, organizes the history into eras, and highlights the moments that shaped the area. It writes only from the material Mhory provides.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-n">4</span>
+          <div>
+            <h3>Follow the timeline back</h3>
+            <p>Trace the place from the present to its earliest available records. Tap any event to see where it came from.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
-      <p class="eyebrow">What's doing the reading</p>
-      <h2>An AI that only says what the record says</h2>
-      <p class="prose">For wherever you are, Mhory collects what has been published about that ground: geotagged Wikipedia articles, dated facts from Wikidata, historic and heritage features in OpenStreetMap, and listings from the US National Register of Historic Places and Historic England. Each item keeps its source.</p>
-      <p class="prose">That collection, and nothing else, goes to Claude, an AI model made by Anthropic, which writes the overview, divides the history into eras, and picks out the moments that mattered. Every sentence it writes is tied to a numbered source in the collection. If it can't tie a claim to one, the claim is dropped before you see it. The same rule applies when you use Ask: answers quote their sources, and when a short entry isn't enough, the AI fetches the full article and reads it first.</p>
-      <p class="prose">What you see is three views of the same reading: the written account with its timeline, the map with the places pinned around you, and Ask for whatever you want to know next.</p>
+      <p class="eyebrow">The three views</p>
+      <h2>History, Map and Ask</h2>
+      <div class="views">
+        <div class="view">
+          <h3>History</h3>
+          <p>The AI summary, the eras, and the timeline for where you are. Everything here links back to its source.</p>
+        </div>
+        <div class="view">
+          <h3>Map</h3>
+          <p>See the historical places around you on an interactive map. Tap a pin to learn more, or press and hold anywhere to uncover the history of a nearby location.</p>
+        </div>
+        <div class="view">
+          <h3>Ask</h3>
+          <p>Ask follow-up questions about the place and receive answers grounded in the records Mhory gathered. Citations are tappable, and when a short entry is not enough, Mhory can consult the full Wikipedia article before answering.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
       <p class="eyebrow">Example</p>
-      <h2>One street, read all the way down</h2>
-      <p class="prose">Pudding Lane in the City of London is a short, plain street of offices. This is its timeline, written by hand from the same records Mhory reads, in the shape the app gives it.</p>
+      <h2>What a reading looks like</h2>
+      <p class="prose">A timeline for Pudding Lane in the City of London, written by hand from the same records Mhory reads, to show the shape of what the app produces.</p>
       <ol class="strata">
         <li class="stratum">
           <span class="year">c. AD 47</span>
