@@ -122,12 +122,27 @@ p.lede { font-size: 1.2rem; color: var(--muted); max-width: 40ch; }
   padding: clamp(48px, 9vw, 112px) 0;
 }
 .hero p.lede { max-width: 46ch; }
-.hero-icon {
-  width: clamp(160px, 24vw, 240px);
-  height: auto;
-  border-radius: 22%;
-  box-shadow: 0 24px 60px rgba(11, 27, 46, 0.28);
+
+/* Phone: a screenshot in a plain dark bezel. The image is 1206x2622, so the
+   bezel's radius scales with its width to keep the corners in proportion. */
+.phone {
+  --w: 300px;
+  width: var(--w);
+  max-width: 100%;
+  margin: 0;
+  padding: calc(var(--w) * 0.03);
+  border-radius: calc(var(--w) * 0.16);
+  background: #0d1420;
+  box-shadow: 0 24px 60px rgba(11, 27, 46, 0.32), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
+.phone img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--w) * 0.13);
+  background: var(--paper);
+}
+.hero-phone { --w: clamp(220px, 26vw, 300px); }
 .hero .rule { width: 56px; height: 3px; background: var(--brass); border: 0; margin: 0 0 20px; }
 
 .stores { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
@@ -180,8 +195,39 @@ p.lede { font-size: 1.2rem; color: var(--muted); max-width: 40ch; }
 .views { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 8px; }
 .view { padding: 4px 28px; border-left: 1px solid var(--hairline); }
 .view:first-child { padding-left: 0; border-left: 0; }
+.view .phone { --w: 100%; margin-bottom: 22px; }
 .view h3 { color: var(--ink-blue); margin-bottom: 6px; }
 .view p { margin: 0; color: var(--muted); }
+
+/* Tiles: short facts laid out side by side. */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin: 24px 0;
+}
+.tile {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 18px 20px 16px;
+  display: flex;
+  flex-direction: column;
+}
+.tile h3 { font-size: 1.15rem; margin-bottom: 6px; }
+.tile p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.tile-k {
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--outline);
+  margin-bottom: 8px;
+}
+.tile-by { margin-top: auto; padding-top: 12px; font-size: 0.8rem; color: var(--outline); }
+.tile.plus { border-top: 3px solid var(--brass); }
+.tile.plus .tile-k { color: var(--brass-deep); }
+.plans { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.sources { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
 
 /* The dig: one place read down through time. */
 
@@ -276,7 +322,8 @@ p.lede { font-size: 1.2rem; color: var(--muted); max-width: 40ch; }
 @media (max-width: 760px) {
   .hero { grid-template-columns: 1fr; gap: 28px; }
   .hero > div:first-child { order: 2; }
-  .hero-icon { width: 128px; }
+  .hero-phone { --w: 200px; margin-inline: auto; }
+  .view .phone { --w: 240px; margin-inline: auto; }
   .views { grid-template-columns: 1fr; gap: 24px; }
   .view { padding: 0; border-left: 0; }
   .strata::before { left: 5px; }

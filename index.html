@@ -50,7 +50,12 @@
         </span>
       </div>
     </div>
-    <img class="hero-icon" src="assets/icon-512.png" alt="The Mhory app icon: a brass hourglass over an old map on ink blue" width="240" height="240">
+    <figure class="phone hero-phone">
+      <picture>
+        <source srcset="assets/history-dark.webp" media="(prefers-color-scheme: dark)">
+        <img src="assets/history-light.webp" alt="The History tab in Mhory at Pudding Lane, London: 843 places within a mile, and a timeline that begins with the Battle of Londinium in AD 60" width="600" height="1304">
+      </picture>
+    </figure>
   </section>
 
   <section class="section">
@@ -95,16 +100,35 @@
     <div class="wrap">
       <p class="eyebrow">The three views</p>
       <h2>History, Map and Ask</h2>
+      <p class="prose">Screens from the app, looking one mile around: History and Ask at Pudding Lane in the City of London, the Map at Greenwich. Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
       <div class="views">
         <div class="view">
+          <figure class="phone">
+          <picture>
+            <source srcset="assets/history-dark.webp" media="(prefers-color-scheme: dark)">
+            <img src="assets/history-light.webp" alt="The History tab: the place name, how many places and dated events were found, a sign-in prompt for the AI summary, and the timeline" width="600" height="1304" loading="lazy">
+          </picture>
+        </figure>
           <h3>History</h3>
           <p>The AI summary, the eras, and the timeline for where you are. Everything here links back to its source.</p>
         </div>
         <div class="view">
+          <figure class="phone">
+          <picture>
+            <source srcset="assets/map-dark.webp" media="(prefers-color-scheme: dark)">
+            <img src="assets/map-light.webp" alt="The Map tab at Greenwich: dozens of historical places within a mile, each marked with a pin on an OpenStreetMap base map, with the Thames and the Isle of Dogs to the north" width="600" height="1304" loading="lazy">
+          </picture>
+        </figure>
           <h3>Map</h3>
           <p>See the historical places around you on an interactive map. Tap a pin to learn more, or press and hold anywhere to uncover the history of a nearby location.</p>
         </div>
         <div class="view">
+          <figure class="phone">
+          <picture>
+            <source srcset="assets/chat-dark.webp" media="(prefers-color-scheme: dark)">
+            <img src="assets/chat-light.webp" alt="The Ask tab: suggested questions such as “What was here 200 years ago?” and a box to ask about this place" width="600" height="1304" loading="lazy">
+          </picture>
+        </figure>
           <h3>Ask</h3>
           <p>Ask follow-up questions about the place and receive answers grounded in the records Mhory gathered. Citations are tappable, and when a short entry is not enough, Mhory can consult the full Wikipedia article before answering.</p>
         </div>
@@ -170,14 +194,58 @@
       <p class="eyebrow">Accounts and cost</p>
       <h2>Free to start</h2>
       <p class="prose">History, the timeline and the map work without an account. The AI summary and Ask need you to sign in with Apple or Google. Signing in is what lets Mhory provide the AI features at no setup cost to you. New accounts get a free monthly allowance of summaries and chat messages. Mhory Plus, a subscription through the App Store or Google Play billed monthly or yearly, raises those limits well beyond normal use.</p>
+      <div class="tiles plans">
+        <div class="tile">
+          <p class="tile-k">No account</p>
+          <h3>Free</h3>
+          <p>History, the timeline and the map, for any place.</p>
+        </div>
+        <div class="tile">
+          <p class="tile-k">Signed in</p>
+          <h3>Free allowance</h3>
+          <p>A monthly allowance of AI summaries and Ask messages, with Apple or Google sign-in.</p>
+        </div>
+        <div class="tile plus">
+          <p class="tile-k">Mhory Plus</p>
+          <h3>Subscription</h3>
+          <p>Limits well beyond normal use. Billed monthly or yearly through the App Store or Google Play.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
       <p class="eyebrow">Sources and privacy</p>
-      <h2>Where the history comes from, and where your data doesn't go</h2>
-      <p class="prose">Mhory reads Wikipedia and Wikidata (Wikimedia Foundation), OpenStreetMap and Nominatim (OpenStreetMap Foundation), the National Register of Historic Places (US National Park Service) and the National Heritage List for England (Historic England). Each receives the coordinates needed to answer a request and nothing about you.</p>
+      <h2>Where the history comes from</h2>
+      <div class="tiles sources">
+        <div class="tile">
+          <h3>Wikipedia</h3>
+          <p>Geotagged articles about the places around you.</p>
+          <p class="tile-by">Wikimedia Foundation</p>
+        </div>
+        <div class="tile">
+          <h3>Wikidata</h3>
+          <p>Dated facts: when things were founded, built, opened or lost.</p>
+          <p class="tile-by">Wikimedia Foundation</p>
+        </div>
+        <div class="tile">
+          <h3>OpenStreetMap</h3>
+          <p>Historic features on the map, and place names through Nominatim.</p>
+          <p class="tile-by">OpenStreetMap Foundation</p>
+        </div>
+        <div class="tile">
+          <h3>National Register of Historic Places</h3>
+          <p>Official listings across the United States.</p>
+          <p class="tile-by">US National Park Service</p>
+        </div>
+        <div class="tile">
+          <h3>National Heritage List for England</h3>
+          <p>Listed buildings and scheduled monuments in England.</p>
+          <p class="tile-by">Historic England</p>
+        </div>
+      </div>
+      <p class="prose">Each source receives the coordinates needed to answer a request and nothing about you.</p>
       <p class="prose">Your location is used while the app is open and isn't stored by us. There are no advertising or analytics trackers. The full details are in the <a href="privacy.html">Privacy Policy</a>.</p>
     </div>
   </section>
